@@ -5,7 +5,7 @@
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
 <!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
 <!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
-<!--[if gt IE 9]><!--> <html class="no-js" lang="en" itemscope="" itemtype="http://schema.org/Product"> <!--<![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en" itemscope="" itemtype="http://schema.org/Product" ng-app="promotracApp"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
 
@@ -13,7 +13,7 @@
 			 More info: h5bp.com/b/378 -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<title>Gumby - A Flexible, Responsive CSS Framework - Powered by SASS</title>
+	<title></title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="author" content="humans.txt">
@@ -37,12 +37,14 @@
 		 However, there is a blank style.css in the css directory should you prefer -->
 	<link rel="stylesheet" href="css/gumby.css">
 	<!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="styles/main.css">
 
 	<script src="bower_components/gumby/js/libs/modernizr-2.6.2.min.js"></script>
 </head>
 
 <body>
 
+    <div class="container" ng-view=""></div>
 
 	<!-- Grab Google CDN's jQuery, fall back to local if offline -->
 	<!-- 2.0 for modern browsers, 1.10 for .oldie -->
@@ -64,10 +66,17 @@
 	}
 	</script>
 
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+
 	<!--
 	Include gumby.js followed by UI modules followed by gumby.init.js
 	Or concatenate and minify into a single file -->
-	<script gumby-touch="js/libs" src="bower_components/gumby/js/libs/gumby.js"></script>
+	<script gumby-init="false" gumby-touch="js/libs" src="bower_components/gumby/js/libs/gumby.js"></script>
 	<script src="bower_components/gumby/js/libs/ui/gumby.retina.js"></script>
 	<script src="bower_components/gumby/js/libs/ui/gumby.fixed.js"></script>
 	<script src="bower_components/gumby/js/libs/ui/gumby.skiplink.js"></script>
@@ -118,6 +127,10 @@
 	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
 	<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
 	<![endif]-->
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+
 
   </body>
 </html>
