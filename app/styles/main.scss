@@ -1,0 +1,20 @@
+$mutedText: lightgray;
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    color: $mutedText;
+    font-size: 0.8em;
+    margin: 0;
+    min-height: 30px;
+    text-align: center;
+
+    a {
+        color: $mutedText;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,18 +1,20 @@
 <div ng-controller="MainCtrl">
   <header>
-    <div class="row navbar pretty" id="nav">
-      <!-- Toggle for mobile navigation, targeting the <ul> -->
-      <a class="toggle" gumby-trigger="#nav > ul" href="#"><i class="icon-menu"></i></a>
-      <h3 class="three columns logo">
-        <a href="#">
-          <i class="icon-network"></i>
-          PromoTrack
-        </a>
-      </h3>
-      <ul class="push_eleven three columns">
-        <li><a href="#">jay.earwood@gmail.com</a></li>
-      </ul>
-    </div>
+    <div class="navbar pretty" id="nav">
+      <div class="row">
+        <!-- Toggle for mobile navigation, targeting the <ul> -->
+        <a class="toggle" gumby-trigger="#nav > ul" href="#"><i class="icon-menu"></i></a>
+        <h3 class="three columns logo">
+          <a href="#">
+            <i class="icon-network"></i>
+            PromoTrack
+          </a>
+        </h3>
+        <ul class="push_eleven three columns">
+          <li><a href="#">jay.earwood@gmail.com</a></li>
+        </ul>
+      </div>
+      </div>
   </header>
 
   <section id="content" class="row tabs vertical">
@@ -41,8 +43,10 @@
 
   </section>
 
-  <footer class="row navbar pretty" id="footer">
-    <div id="copyright">Copyright &copy; 2013 - <a href="#">Jay Earwood</a></div>
+  <footer class="navbar pretty" id="footer">
+    <div class="row">
+      <span id="copyright">Copyright &copy; 2013 - <a href="#">Jay Earwood</a></span>
+    </div>
   </footer>
  
 </div>
